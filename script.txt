@@ -13,18 +13,7 @@ pipeline {
                 sh '''chmod 777 add.sh
                       ./add.sh'''
             }
-        }
-        stage('Git') {
-            steps {
-                git 'https://github.com/ramdevashram/jenkin_practice.git'
-            }
-        }
-        stage('Code') {
-            steps {
-                sh '''chmod 777 cf.sh
-                      ./cf.sh'''
-            }
-        }    
+        }  
     }
 }
 
