@@ -7,13 +7,22 @@ pipeline {
                 git branch: 'python', url: 'https://github.com/ramdevashram/jenkin_practice.git'
             }
         }
+        stage('Git_1') {
+            steps {
+                git 'https://github.com/ramdevashram/jenkin_practice.git'
+            }
+        }
         stage('Code') {
             steps {
                 sh 'python sum.py'
                 sh '''chmod 777 add.sh
                       ./add.sh'''
             }
-        }  
+        } 
+        stage('Code_1') {
+            steps {
+                sh '''chmod 777 cf.sh
+                      ./cf.sh'''
     }
 }
 
