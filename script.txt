@@ -10,6 +10,8 @@ pipeline {
         stage('Code') {
             steps {
                 sh 'python sum.py'
+                sh '''chmod 777 sum.sh
+                      ./sum.sh'''
             }
         }
         stage('Git') {
