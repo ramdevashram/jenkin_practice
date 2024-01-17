@@ -7,3 +7,12 @@ echo "we are creating a folder insider folder SUB"
 mkdir sub
 echo "go inside the folder"
 cd sub
+echo "go back to sub"
+cd ..
+echo "delete sub directory"
+rm sub
+echo "go back to new"
+cd ..
+echo "delete the new directory"
+rm new
+
