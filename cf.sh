@@ -13,6 +13,5 @@ echo "delete sub directory"
 rm sub
 echo "go back to new"
 cd ..
-echo "delete the new directory"
-rm new
+
 
