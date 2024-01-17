@@ -10,8 +10,8 @@ pipeline {
         stage('Code') {
             steps {
                 sh 'python sum.py'
-                sh '''chmod 777 sum.sh
-                      ./sum.sh'''
+                sh '''chmod 777 add.sh
+                      ./add.sh'''
             }
         }
         stage('Git') {
@@ -21,8 +21,8 @@ pipeline {
         }
         stage('Code') {
             steps {
-                sh '''chmod 777 add.sh
-                      ./add.sh'''
+                sh '''chmod 777 cf.sh
+                      ./cf.sh'''
             }
         }    
     }
