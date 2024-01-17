@@ -9,8 +9,7 @@ pipeline {
         }
         stage('Code') {
             steps {
-                sh '''python sum.py
-                python this is addition result'''
+                sh 'python sum.py'
             }
         }
     }
