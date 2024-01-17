@@ -4,25 +4,26 @@ pipeline {
     stages {
         stage('Git') {
             steps {
-                git branch: 'python', url: 'https://github.com/ramdevashram/jenkin_practice.git'
+               git branch: 'python', url: 'https://github.com/ramdevashram/jenkin_practice.git'
             }
-        }  
-        stage('Code') {
+        }
+        stage('code') {
             steps {
-                sh 'python sum.py'
-                sh '''chmod 777 add.sh
-                      ./add.sh'''
+            sh '''python sum.py
+                  chmod 777 add.sh
+                  ./add.sh'''
             }
-        } 
+        }
         stage('Git_1') {
             steps {
                 git 'https://github.com/ramdevashram/jenkin_practice.git'
             }
         }
-        stage('Code_1') {
+        stage('code_1') {
             steps {
                 sh '''chmod 777 cf.sh
-                      ./cf.sh'''
+                ./cf.sh'''
+            }
+        }
     }
 }
-
